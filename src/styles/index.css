@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 255, 77, 77;
+    --color-secondary: 26, 26, 26;
+  }
+
+  body {
+    @apply antialiased text-white bg-gray-900 min-h-screen;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-red-600 text-white py-2 px-4 rounded hover:bg-red-700 transition duration-200;
+  }
+  
+  .input-field {
+    @apply w-full p-2 rounded bg-gray-700 text-white border border-gray-600 focus:border-red-500 focus:ring-1 focus:ring-red-500 focus:outline-none;
+  }
+
+  .card {
+    @apply bg-gray-800 rounded-lg shadow-lg overflow-hidden;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+}
